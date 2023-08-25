@@ -61,6 +61,12 @@ body {
   font-weight: 400;
   letter-spacing: 35px;
   text-align: center;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+  /* animation-iteration-count: 3; */
 }
 .heading-primary-sub {
   display: block;
@@ -68,4 +74,42 @@ body {
   font-weight: 700;
   letter-spacing: 12px;
   text-align: center;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+  /* animation-iteration-count: 3; */
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
